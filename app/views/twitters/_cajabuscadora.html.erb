@@ -1,0 +1,50 @@
+<ul style="list-style: none;">
+    <br>
+    <br>
+    <li>
+        <h6>Buscador</h6>
+    </li>
+    <br>
+    
+    <li>
+        <%= form_with url: twitters_path, method: :get do |form| %>
+                
+        <%= form.text_field :query_text, placeholder: 'Escribe AQUI', value: params[:query_text] %>
+                
+        <%= form.submit "Buscar" %>
+        <% end %>
+                
+    </li>
+    
+    <br>
+    <li>
+        <h5>Twitt del Día</h5>
+    </li>    
+    <br>
+    <li>          
+    </li>    
+    <br>
+    <li>  
+        <h6>content</h6> 
+    </li> 
+</ul>        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

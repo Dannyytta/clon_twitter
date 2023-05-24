@@ -12,8 +12,14 @@ gem "sprockets-rails"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
+#buscador pg_search
+gem "pg_search", "~> 2.3"
+
 # Gem Faker
 gem "faker", "~> 3.2"
+
+# Gem Pagy (paginas)
+gem "pagy"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"

@@ -1,20 +1,30 @@
-<div class="border">
+<div>
 
-    <p style="color: green"><%= notice %></p>
-
-    <h1>Twitters</h1>
-
-    <%= link_to "Nuevo Twitt", new_twitter_path %>
-
-    <div id="twitters">
-      <% @twitters.each do |twitter| %>
-        <div class="border">
-        <%= render twitter %>
-          <p>
-           <%= link_to "Mostrar este twitt", twitter %>
-          </p>
-        </div> 
-      <% end %>
+  <p style="color: green"><%= notice %></p>
+  <div class="border border-info, text-center " style="padding-top: 20px; padding-bottom: 20px;">
+    <h1>Qué sucede!?</h1>
+      
+    
+    <div class="text-center" style="margin-top: 20px; margin-bottom: 20px;">
+      <%= link_to "Nuevo Twitt", new_twitter_path %>
     </div>
+
+  </div>
+    
+  <div id="twitters">
+    <% @twitters.each do |twitter| %>
+      <div class="border">
+          
+        <%= render twitter %>
+          
+        <p style="margin: 30px;">
+          <%= link_to "Mostrar este twitt", twitter %>
+        </p>
+      </div> 
+    <% end %>
+  </div>
+  
+  <%=@pagy%>
+
 </div>
 

@@ -1,9 +1,16 @@
 class TwittersController < ApplicationController
   before_action :set_twitter, only: %i[ show edit update destroy ]
 
+  def buscador
+  end
+  
+  
   # GET /twitters or /twitters.json
   def index
-    @twitters = Twitter.order(created_at: :desc)
+    @pagy, @twitters = pagy(Twitter.order(created_at: :desc))
+    if params[:query_text].present?
+      @pagy, @twitters = pagy(Twitter.search_full_text(params[:query_text]))
+    end 
   end
 
   # GET /twitters/1 or /twitters/1.json

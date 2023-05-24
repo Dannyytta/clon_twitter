@@ -1,4 +1,3 @@
-
 <%= form_with(model: twitter) do |form| %>
   <% if twitter.errors.any? %>
     <div style="color: red">
@@ -23,6 +22,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Sube el Twitt" %>
   </div>
 <% end %>
