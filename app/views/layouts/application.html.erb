@@ -16,21 +16,53 @@
   <div class="container">
     <div class="row">
       
-      <div class="col order-last">
-        <%= link_to "New twitter", new_twitter_path %> 
+      <div class="col order-last ">
+        <%= link_to "AQUI VA BUSCADOR", new_twitter_path %> 
       </div>
     
       <div class="col-6">
-      
+        <div class="sticky-sm-top">
+          <nav class="navbar bg-body-tertiary">    
+            <div class="container-fluid">
+              <a class="navbar-brand" href="<%= twitters_path %>">HOME</a>
+            </div>
+          </nav>    
+        </div>
         <%= yield %>
       </div>
     
       <div class="col order-first">
-        <nav class="navbar bg-body">
+        <nav class="sticky-top bg-body">
           <div class="container col-md-auto">
-            <a class="navbar-brand" href="#">
-              <img src="<%= asset_path "im.jpg" %>" alt="Clontwitter" width="70" height="70">
-            </a>
+            <ul style="list-style: none;">
+              <br>
+              <br>
+              <li>
+                <a class="navbar-brand" href="<%= twitters_path %>">
+                  <img src="<%= asset_path "im.jpg" %>" alt="Clon twitter" width="50" height="50">
+                </a>
+              </li>
+              <br>
+              <br>
+              <li>
+                <a class="navbar-brand" href="<%= @twitter %>">
+                  <img src="<%= asset_path "buscar.jpg" %>" alt="Buscar" width="50" height="50">
+                </a>
+              </li>
+              <br>
+              <br>
+              <li>  
+                <a class="navbar-brand margin" href="#">
+                  <img src="<%= asset_path "campana.jpg" %>" alt="Los nuevos" width="50" height="50">
+                </a>
+              </li>
+              <br>
+              <br>
+              <li>  
+                <a class="navbar-brand" href="<%= new_twitter_path %>">
+                  <img src="<%= asset_path "nuevo.jpg" %>" alt="Crear nuevo" width="50" height="50">
+                </a>
+              </li>         
           </div>
         </nav>
       </div>
@@ -38,7 +70,7 @@
     </div>
   </div>
 
-
+  
  
     
       

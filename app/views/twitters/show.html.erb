@@ -1,10 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @twitter %>
+  
+  
+<div class="border">
+  <%= render @twitter %>
 
-<div>
-  <%= link_to "Edit this twitter", edit_twitter_path(@twitter) %> |
-  <%= link_to "Back to twitters", twitters_path %>
+  <div>
+    <%= link_to "Editar Twitt", edit_twitter_path(@twitter) %> |
+    <%= link_to "A Home", twitters_path %>
+    
+    <%= button_to "Destruir twitt", @twitter, method: :delete %>
 
-  <%= button_to "Destroy this twitter", @twitter, method: :delete %>
+  </div>
 </div>

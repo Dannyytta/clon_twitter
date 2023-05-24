@@ -1,18 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<div class="border">
 
-<h1>Twitters</h1>
+    <p style="color: green"><%= notice %></p>
 
-<%= link_to "New twitter", new_twitter_path %>
+    <h1>Twitters</h1>
 
+    <%= link_to "Nuevo Twitt", new_twitter_path %>
 
-
-<div id="twitters">
-  <% @twitters.each do |twitter| %>
-    <%= render twitter %>
-    <p>
-      <%= link_to "Show this twitter", twitter %>
-    </p>
-  <% end %>
+    <div id="twitters">
+      <% @twitters.each do |twitter| %>
+        <div class="border">
+        <%= render twitter %>
+          <p>
+           <%= link_to "Mostrar este twitt", twitter %>
+          </p>
+        </div> 
+      <% end %>
+    </div>
 </div>
-
 

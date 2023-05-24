@@ -3,7 +3,7 @@ class TwittersController < ApplicationController
 
   # GET /twitters or /twitters.json
   def index
-    @twitters = Twitter.all
+    @twitters = Twitter.order(created_at: :desc)
   end
 
   # GET /twitters/1 or /twitters/1.json
@@ -25,7 +25,7 @@ class TwittersController < ApplicationController
 
     respond_to do |format|
       if @twitter.save
-        format.html { redirect_to twitter_url(@twitter), notice: "Twitter was successfully created." }
+        format.html { redirect_to twitter_url(@twitter), notice: "Twitter creado" }
         format.json { render :show, status: :created, location: @twitter }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class TwittersController < ApplicationController
   def update
     respond_to do |format|
       if @twitter.update(twitter_params)
-        format.html { redirect_to twitter_url(@twitter), notice: "Twitter was successfully updated." }
+        format.html { redirect_to twitter_url(@twitter), notice: "Twitter editado" }
         format.json { render :show, status: :ok, location: @twitter }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class TwittersController < ApplicationController
     @twitter.destroy
 
     respond_to do |format|
-      format.html { redirect_to twitters_url, notice: "Twitter was successfully destroyed." }
+      format.html { redirect_to twitters_url, notice: "Twitter destruido" }
       format.json { head :no_content }
     end
   end
