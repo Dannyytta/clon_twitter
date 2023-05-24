@@ -1,7 +1,7 @@
 <%= form_with(model: twitter) do |form| %>
   <% if twitter.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(twitter.errors.count, "error") %> prohibited this twitter from being saved:</h2>
+      <h2><%= pluralize(twitter.errors.count, "error") %> No es posible Twittear, Dale de nuevo!</h2>
 
       <ul>
         <% twitter.errors.each do |error| %>

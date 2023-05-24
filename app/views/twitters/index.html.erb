@@ -2,6 +2,10 @@
 
 <h1>Twitters</h1>
 
+<%= link_to "New twitter", new_twitter_path %>
+
+
+
 <div id="twitters">
   <% @twitters.each do |twitter| %>
     <%= render twitter %>
@@ -11,4 +15,4 @@
   <% end %>
 </div>
 
-<%= link_to "New twitter", new_twitter_path %>
+
